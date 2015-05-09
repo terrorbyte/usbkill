@@ -7,7 +7,7 @@
 To run:
 
 ```shell
-sudo python3 usbkill.py
+sudo usbkill
 ```
 
 ### Why?
@@ -24,23 +24,23 @@ There are 3 reasons (maybe more?) to use this tool:
 
 ### Feature List
 
-- Compability with Linux, *BSD and OS X
+- Compability with Linux and OS X (BSD's soon)
 - Shutdown the computer when there is USB activity
 - Ability to whitelist an USB device
-- Ability to change the check interval (default: 0.5)
-- Work perfectly in sleep mode (OS X)
-- Low memory consumption
-- No dependency except Python
 
-and more to come! Custom commands for when a USB change is observed will be implemented.
+### Installation/Usage
 
-### Additional requirement for OS X users
-
-In order to make usbkill work on OS X, you have to install *python3* by using [brew](http://brew.sh):
-
-```shell
-brew update && brew install python3
+To install run:
 ```
+sudo ./install.sh
+```
+
+Then to enable or disable usbkill:
+```
+sudo usbkill
+```
+
+To add a device to the whitelist add serial numbers to the WHITELIST_SERIAL option in `/etc/usbkill/usbkill_config`. By default all devices are blacklisted and will shutdown when any USB is unplugged. It should be noted that the `usbkill` command generates from the config file at every run.
 
 ### Contact
 

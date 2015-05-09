@@ -1,0 +1,9 @@
+WHITELIST_SERIAL=""
+ACTION="add|remove"
+SUBSYSTEMS="usb"
+DEVTYPE="usb_device"
+COMMAND="/etc/usbkill/shutdown.sh"
+#COMMAND="/usr/share/usbkill/test.sh"
+#Additional rules
+#ADDITIONAL='ENV{serial}=="*",'
+ADDITIONAL=""
